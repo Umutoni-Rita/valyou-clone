@@ -48,3 +48,33 @@ form input{
   padding: 4px;
   margin: 4px 10px;
 }
+/* Add these styles to your existing CSS file */
+
+.sidebar {
+  width: 250px; /* Set the width of the sidebar according to your design */
+  height: 100vh; /* Make the sidebar cover the full height of the viewport */
+  background-color: rgb(221, 221, 212); /* Sidebar background color */
+  position: fixed; /* Fixed position so it stays in place even when scrolling */
+  top: 0;
+  left: -250px; /* Initially position the sidebar off-screen */
+  transition: left 0.3s ease; /* Add smooth transition effect for left property */
+
+  /* Style for links inside the sidebar */
+  .sidebar-link {
+    color: #fff;
+    text-decoration: none;
+    padding: 15px;
+    display: block;
+    transition: background-color 0.3s ease; /* Add smooth transition effect for background color */
+  }
+
+  /* Change background color of links on hover */
+  .sidebar-link:hover {
+    background-color: rgb(243, 237, 243);
+  }
+}
+
+/* Adjust the left position of the sidebar when it's visible */
+.sidebar.visible {
+  left: 0;
+}
